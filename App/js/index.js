@@ -1,8 +1,7 @@
 xui.Class('App.hr.user.tab._add', 'xui.Module', {
     Instance: {
         events: { "onReady": "_onready", "onRender": "_onrender" },
-        iniComponents: function () {
-            // [[Code created by CrossUI RAD Studio
+        iniComponents: function () {          
             var host = this, children = [], append = function (child) { children.push(child.get(0)); };
 
             append(
@@ -169,13 +168,12 @@ xui.Class('App.hr.user.tab._add', 'xui.Module', {
             );
 
             return children;
-            // ]]Code created by CrossUI RAD Studio
+           
         },
         _onready: function (m, t) {
             var ns = this;
             var tool = yr.grid.tool(["save", "del"]);
-            tool.sub.push({ id: "pswd", caption: "重置密码", type: "button", imageClass: "spafont spa-icon-config" });
-            tool.sub.push({ id: "okpswd", caption: "解码密码", type: "button", imageClass: "xui-uicmd-color" });
+            tool.sub.push({ id: "pswd", caption: "重置密码", type: "button", imageClass: "spafont spa-icon-config" });           
             ns._tlb.setItems(tool);//工具栏  
         },
         _onrender: function (m, t) {
