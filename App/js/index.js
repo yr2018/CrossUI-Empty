@@ -206,14 +206,7 @@ xui.Class('App.hr.user.tab._add', 'xui.Module', {
                     yr.request(ns.NSP.t.url, { act: "pswd", p: { Id: ns.ROWID } }, function (rsp) {
                         xui.pop("您的新密码", rsp.data);
                     }, ns._dlg);
-                    break;
-                case "okpswd":
-
-                    yr.request(ns.NSP.t.url, { act: "pswd", p: { Id: ns.ROWID } }, function (rsp) {
-                        xui.pop("您的新密码", rsp.data);
-                    }, ns._dlg);
-
-                    break;
+                    break;                
             }
         }
     }
